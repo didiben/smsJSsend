@@ -44,11 +44,15 @@ angular.module('starter', ['ionic','ngCordova'])
         numbers: '0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994',
         names: 'Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit',
         times: '23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h',
-        message: 'Coucou *, tu es dans le bus de *'
+        message: 'Coucou #, tu es dans le bus de #'
     };
     $scope.readyToGo = false;
     $scope.readyToCheck = true;
     $scope.done = false;
+    $scope.numberofpeopple = 0;
+    $scope.sentSMS = {};
+    $scope.proceeding = false;
+
     $scope.verifyNumbers = function() {
         console.log('############# verifyNumbers launched ! #############');
         if ($scope.form.numbers.substring(0,2) != '06' && $scope.form.numbers.substring(0,2) != '07') {
@@ -78,7 +82,7 @@ angular.module('starter', ['ionic','ngCordova'])
     };
     $scope.verifyMessage = function() {
         console.log('############# verifyMessage launched ! #############');
-        if ($scope.form.message.split('*').length -1 != 2) {
+        if ($scope.form.message.split('#').length -1 != 2) {
             $scope.form.message = undefined;
             alert('Mauvais format de message');
         }
@@ -101,7 +105,7 @@ angular.module('starter', ['ionic','ngCordova'])
             count = input.numbers.split(';').length; // -1 to hve the correct ';' count, here it's just the number of people
             console.log('############# ' + (count) + ' entries #############');
             for (var i = 0; i < count; i++) {
-                console.log('############# Proceeding entry #' + (i + 1) + ' #############');
+                console.log('Proceeding entry #' + (i + 1));
                 var n = input.numbers.indexOf(';');
                 var t = input.names.indexOf(';');
                 var p = input.times.indexOf(';');
@@ -115,24 +119,25 @@ angular.module('starter', ['ionic','ngCordova'])
                     name: input.names.substring(0, t),
                     time: input.times.substring(0, p),
                 };
-                console.log(data[i]);
                 input.numbers = input.numbers.substring(n + 1);
                 input.names = input.names.substring(t + 1);
                 input.times = input.times.substring(p + 1);
             }
-            console.log(data);
             message = input.message;
             delete $scope.form;
             delete input;
             $scope.readyToGo = true;
             $scope.readyToCheck = false;
+            $scope.numberofpeopple = data.length
         } else {
             alert('Erreur d\'entrée');
         }
     };
 
     $scope.sendSMS = function() {
-        console.log('############# sendSMS launched ! #############');
+        console.log('############# sendSMS function launched ! #############');
+        $scope.proceeding = true;
+        $scope.readyToGo = false;
         var options = {
             replaceLineBreaks: true, // true to replace \n by a new line, false by default
             android: {
@@ -141,14 +146,19 @@ angular.module('starter', ['ionic','ngCordova'])
             }
         };
         function nextStep(texto, options) {
-            console.log('############# Sening text... #############');
+            console.log('############# Sending text... #############');
             console.log(texto);
             $ionicPlatform.ready(function() {
                 $cordovaSms
                 .send(data[i].number, texto, options)
                 .then(function(result) {
                     console.log(result);
-
+                    $scope.sentSMS[$scope.sentSMS.length] = {
+                        name: data[i].name,
+                        time: data[i].time,
+                        number: data[i].number,
+                        times: $scope.sentSMS.length
+                    };
                 }, function(error) {
                     console.log(error);
                     errorGestion(error, data[i]);
@@ -156,11 +166,11 @@ angular.module('starter', ['ionic','ngCordova'])
             })
         }
         for (var i = 0; i < count; i++) {
-            console.log('############# Proceeding entry #' + (i + 1) + ' #############');
+            console.log('Proceeding SMS #' + (i + 1));
             var n = 0;
             var texto = message;
             for (var j = 0; j < 2; j++) {
-                var n = texto.indexOf('*')
+                var n = texto.indexOf('#')
                 switch (j) {
                     case 0:
                     texto = texto.substring(0, n) + data[i].name + texto.substring(n + 1);
@@ -174,6 +184,7 @@ angular.module('starter', ['ionic','ngCordova'])
             if (i == 4) {
                 $scope.readyToGo = false;
                 $scope.done = true;
+                $scope.readyToGo = false;
             }
         }
     };

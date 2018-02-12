@@ -39,8 +39,8 @@
         <ion-header-bar class="bar-stable bar-positive">
             <h1 class="title"><ion-icon class="ion-flash"/>&#160;&#160;Envoi SMS&#160;&#160;<ion-icon class="ion-flash"/></h1>
         </ion-header-bar>
-        <ion-content ng-controller="SmsCtroller">
-            <div class="list">
+        <ion-content class="container" ng-controller="SmsCtroller" has-header="true" has-subheader="true">
+            <div class="list" ng-show="readyToCheck">
                 <label class="item item-input item-stacked-label">
                     <span class="input-label"><strong>Numéros</strong></span>
                     <input id="numberTxt" type="text" ng-model="form.numbers" ng-change="verifyNumbers()">
@@ -58,8 +58,41 @@
                     <input id="messageTxt" type="text" ng-model="form.message" ng-change="verifyMessage()">
                 </label>
             </div>
-            <button class="button button-block button-assertive" ng-click="dataTreat()" ng-show="readyToCheck">Traiter les données&#160;&#160;<ion-icon class="ion-gear-a"/></button>
-            <button class="button button-block button-balanced" ng-click="sendSMS()" ng-show="readyToGo">Send SMS&#160;&#160;<ion-icon class="ion-paper-airplane"/></button>
+            <div class="alert alert-warning text-center" role="alert" ng-show="readyToGo" style="margin:10%;">
+                Le traitement est terminé, aucune erreur de traitement détectée sur {{numberofpeopple}} données.
+            </div>
+            <div class="text-center" ng-show="proceeding" id="loading">
+                <div id="circularG">
+                    <div id="circularG_1" class="circularG"></div>
+                    <div id="circularG_2" class="circularG"></div>
+                    <div id="circularG_3" class="circularG"></div>
+                    <div id="circularG_4" class="circularG"></div>
+                    <div id="circularG_5" class="circularG"></div>
+                    <div id="circularG_6" class="circularG"></div>
+                    <div id="circularG_7" class="circularG"></div>
+                    <div id="circularG_8" class="circularG"></div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="button button-assertive" ng-click="dataTreat()" ng-show="readyToCheck">Traiter les données&#160;&#160;<ion-icon class="ion-gear-a"/></button>
+                <button class="button button-balanced" ng-click="sendSMS()" ng-show="readyToGo">Envoyer les SMS&#160;&#160;<ion-icon class="ion-paper-airplane"/></button>
+            </div>
+            <div class="card" style="margin:5%;" ng-show="readyToGo" ng-repeat="sent in sentSMS">
+                <div class="card-body">
+                    <h5 class="card-title">Envoi {{sent.times}}/{{numberofpeopple}}</h5>
+                    <div class="card-text">
+                        <div class="col-sm-3">
+                            <strong>Nom :</strong> {{sent.name}}
+                        </div>
+                        <div class="col-sm-3">
+                            <strong>Bus :</strong> {{sent.time}}
+                        </div>
+                        <div class="col-sm-3">
+                            <strong>Numéro :</strong> {{sent.number}}
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="card" ng-show="done">
                 <div class="item item-text-wrap text-center">
                     Tout ce qui devait arriver... Arriva...&#160;&#160;<ion-icon class="ion-thumbsup"/>
