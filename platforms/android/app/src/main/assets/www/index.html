@@ -58,55 +58,42 @@
                     <input id="messageTxt" type="text" ng-model="form.message" ng-change="verifyMessage()">
                 </label>
             </div>
-            <div class="alert alert-warning text-center" role="alert" ng-show="readyToGo" style="margin:10%;">
-                Le traitement est terminé, aucune erreur de traitement détectée sur {{numberofpeopple}} données.
-            </div>
-            <div class="text-center" ng-show="proceeding" id="loading">
-                <div id="circularG">
-                    <div id="circularG_1" class="circularG"></div>
-                    <div id="circularG_2" class="circularG"></div>
-                    <div id="circularG_3" class="circularG"></div>
-                    <div id="circularG_4" class="circularG"></div>
-                    <div id="circularG_5" class="circularG"></div>
-                    <div id="circularG_6" class="circularG"></div>
-                    <div id="circularG_7" class="circularG"></div>
-                    <div id="circularG_8" class="circularG"></div>
+            <div class="card" id="treatmentDone" ng-show="readyToGo">
+                <div class="card-body text-center">
+                    Le traitement terminé pour les {{numberofpeopple}} données
                 </div>
             </div>
-            <div class="text-center">
+            <div class="text-center" id="buttons">
                 <button class="button button-assertive" ng-click="dataTreat()" ng-show="readyToCheck">Traiter les données&#160;&#160;<ion-icon class="ion-gear-a"/></button>
                 <button class="button button-balanced" ng-click="sendSMS()" ng-show="readyToGo">Envoyer les SMS&#160;&#160;<ion-icon class="ion-paper-airplane"/></button>
             </div>
-            <div class="card" style="margin:5%;" ng-show="readyToGo" ng-repeat="sent in sentSMS">
+            <div id="floatingCirclesG" ng-show="proceeding">
+                <div class="f_circleG" id="frotateG_01"></div>
+                <div class="f_circleG" id="frotateG_02"></div>
+                <div class="f_circleG" id="frotateG_03"></div>
+                <div class="f_circleG" id="frotateG_04"></div>
+                <div class="f_circleG" id="frotateG_05"></div>
+                <div class="f_circleG" id="frotateG_06"></div>
+                <div class="f_circleG" id="frotateG_07"></div>
+                <div class="f_circleG" id="frotateG_08"></div>
+            </div>
+            <div class="card whatWasSend" ng-repeat="sent in sentSMS">
                 <div class="card-body">
-                    <h5 class="card-title">Envoi {{sent.times}}/{{numberofpeopple}}</h5>
+                    <h5 class="card-title text-center"><strong style="color:white">Envoi {{sent.times}}/{{numberofpeopple}}</strong></h5>
                     <div class="card-text">
-                        <div class="col-sm-3">
-                            <strong>Nom :</strong> {{sent.name}}
-                        </div>
-                        <div class="col-sm-3">
-                            <strong>Bus :</strong> {{sent.time}}
-                        </div>
-                        <div class="col-sm-3">
-                            <strong>Numéro :</strong> {{sent.number}}
-                        </div>
+                        <table class="text-center">
+                            <tr class="row">
+                                <td class="col">{{sent.name}}</td>
+                                <td class="col">{{sent.time}}</td>
+                                <td class="col">{{sent.number}}</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
             <div class="card" ng-show="done">
                 <div class="item item-text-wrap text-center">
                     Tout ce qui devait arriver... Arriva...&#160;&#160;<ion-icon class="ion-thumbsup"/>
-                </div>
-            </div>
-            <div class="list list-inset" ng-show="readyToGo">
-                <div ng-repeat="error in errors" class="item">
-                    <div class="bar bar-header bar-assertive">
-                        <h1 class="title">Erreur d'envoi de SMS</h1>
-                    </div><br><br>
-                    <strong>Error number:&#160;</strong>{{error.number}}<br>
-                    <strong>Time:&#160;</strong>{{error.time}}<br>
-                    <strong>Recipient name:&#160;</strong>{{error.recipientName}}<br>
-                    <strong>Recipient phone:&#160;</strong>{{error.recipientPhone}}<br>
                 </div>
             </div>
         </ion-content>

@@ -41,9 +41,9 @@ angular.module('starter', ['ionic','ngCordova'])
 
     nbError = 0;
     $scope.form = {
-        numbers: '0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994;0672686994',
-        names: 'Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit',
-        times: '23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h',
+        numbers: '0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480;0661493480',
+        names: 'PREMIER;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;HASUN;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;HASDX;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;HASTRS;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;DERNIER;PREMIER;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;HASUN;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;HASDX;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;HASTRS;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;DERNIER;PREMIER;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;HASUN;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;HASDX;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;HASTRS;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;DERNIER;PREMIER;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;HASUN;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;HASDX;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;HASTRS;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;DERNIER;PREMIER;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;HASUN;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;HASDX;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;HASTRS;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;DERNIER;PREMIER;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;HASUN;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;HASDX;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;HASTRS;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;DERNIER;PREMIER;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;HASUN;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;HASDX;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;HASTRS;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;DERNIER;PREMIER;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;HASUN;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;HASDX;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;HASTRS;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;DERNIER;PREMIER;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;HASUN;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;HASDX;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;Benoit;Camille;HASTRS;Jérémy;Pascal;Benoit;Camille;Chloé;Jérémy;Pascal;DERNIER',
+        times: '23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;1h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;1h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;1h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;1h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;1h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;1h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;1h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;1h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h;23h;00h;22h;01h;21h',
         message: 'Coucou #, tu es dans le bus de #'
     };
     $scope.readyToGo = false;
@@ -159,33 +159,69 @@ angular.module('starter', ['ionic','ngCordova'])
                         number: data[i].number,
                         times: $scope.sentSMS.length
                     };
+                    $scope.$apply;
+                    console.log("SMS #" + i + " sent!");
                 }, function(error) {
                     console.log(error);
                     errorGestion(error, data[i]);
                 })
             })
         }
-        for (var i = 0; i < count; i++) {
-            console.log('Proceeding SMS #' + (i + 1));
-            var n = 0;
-            var texto = message;
-            for (var j = 0; j < 2; j++) {
-                var n = texto.indexOf('#')
-                switch (j) {
-                    case 0:
-                    texto = texto.substring(0, n) + data[i].name + texto.substring(n + 1);
-                    break;
-                    case 1:
-                    texto = texto.substring(0, n) + data[i].time + texto.substring(n + 1);
-                    nextStep(texto, options);
-                    break;
+
+        var i = 1;
+
+        function myLoop () {           //  create a loop function
+            setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+                console.log('Proceeding SMS #' + (i + 1));
+                var n = 0;
+                var texto = message;
+                for (var j = 0; j < 2; j++) {
+                    var n = texto.indexOf('#')
+                    switch (j) {
+                        case 0:
+                        texto = texto.substring(0, n) + data[i].name + texto.substring(n + 1);
+                        break;
+                        case 1:
+                        texto = texto.substring(0, n) + data[i].time + texto.substring(n + 1);
+                        nextStep(texto, options);
+                        break;
+                    }
                 }
-            }
-            if (i == 4) {
-                $scope.readyToGo = false;
-                $scope.done = true;
-                $scope.readyToGo = false;
-            }
+                if (i == 4) {
+                    $scope.readyToGo = false;
+                    $scope.done = true;
+                    $scope.readyToGo = false;
+                }         //  your code here
+                i++;                     //  increment the counter
+                if (i < count) {            //  if the counter < 10, call the loop function
+                    myLoop();             //  ..  again which will trigger another
+                }                        //  ..  setTimeout()
+            }, 5000)
         }
+
+        myLoop();
+
+        // for (var i = 0; i < count; i++) {
+        //     console.log('Proceeding SMS #' + (i + 1));
+        //     var n = 0;
+        //     var texto = message;
+        //     for (var j = 0; j < 2; j++) {
+        //         var n = texto.indexOf('#')
+        //         switch (j) {
+        //             case 0:
+        //             texto = texto.substring(0, n) + data[i].name + texto.substring(n + 1);
+        //             break;
+        //             case 1:
+        //             texto = texto.substring(0, n) + data[i].time + texto.substring(n + 1);
+        //             nextStep(texto, options);
+        //             break;
+        //         }
+        //     }
+        //     if (i == 4) {
+        //         $scope.readyToGo = false;
+        //         $scope.done = true;
+        //         $scope.readyToGo = false;
+        //     }
+        // }
     };
 }])
