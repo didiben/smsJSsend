@@ -159,6 +159,8 @@ angular.module('starter', ['ionic','ngCordova'])
                         number: data[i].number,
                         times: $scope.sentSMS.length
                     };
+                    $scope.$apply;
+                    console.log("SMS #" + i + " sent!");
                 }, function(error) {
                     console.log(error);
                     errorGestion(error, data[i]);
